@@ -1,6 +1,6 @@
 // Variables
 
-$color-main: rgba(0%, 0%, 0%, 0.75);
+$color-main: rgba(0%, 0%, 0%, 0.7);
 $color-second: #77efe5;
 $color-third: #eaebed;
 $color-black: #000000;
@@ -77,6 +77,20 @@ body {
     font-size: 17px;
     text-transform: uppercase;
     color: $color-main;
+}
+
+.name-and-prof {
+    @include font-merriweather;
+    font-size: 20px;
+    font-weight: 700;
+    color: $color-black;
+
+    span {
+        font-size: 15px;
+        font-weight: 400;
+        font-style: italic;
+        color: $color-gray;
+    }
 }
 
 // / Common
@@ -286,7 +300,11 @@ body {
     }
 
     &-item {
-        margin: 2px 5px;
+        margin: 5px 5px;
+
+        img {
+            display: block;
+        }
     }
 }
 
@@ -309,6 +327,10 @@ body {
         margin-top: 20px;
         background-color: rgba(47%, 94%, 90%, 0.9);
         transition: 0.2s;
+
+        img {
+            display: block;
+        }
 
         &:nth-child(2n) {
             margin-left: 20px;
@@ -434,6 +456,10 @@ body {
             opacity: 0;
             transition: 0.2s;
 
+            .name-and-prof {
+                margin-bottom: 15px;
+            }
+
 
             &:before {
                 position: absolute;
@@ -442,21 +468,6 @@ body {
                 left: 20px;
                 z-index: 100;
                 border: 10px solid transparent; border-bottom: 20px solid $color-second;
-            }
-
-            &-title {
-                @include font-merriweather;
-                font-size: 20px;
-                font-weight: 700;
-                margin-bottom: 15px;
-                color: $color-black;
-
-                span {
-                    font-size: 15px;
-                    font-weight: 400;
-                    font-style: italic;
-                    color: $color-gray;
-                }
             }
 
             &-text {
@@ -495,3 +506,173 @@ body {
         }
     }
 }
+
+// / Team
+
+// Testimonials
+
+.section-testimonials {
+    @include section-padding;
+    background-color: #f9fbfb;
+
+    &-wrapper {
+        
+    }
+
+    &-3d-carousel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-slides {
+            position: relative;
+            width: 320px;
+            height: 410px;
+        }
+
+        &-slide {
+            position: absolute;
+
+            img {
+                width: 320px;
+                height: 410px;
+                display: block;
+                box-shadow: 0px 6px 24px 0px rgba(20, 20, 21, 0.17);
+            }
+        }
+
+        .slide--hide {
+            visibility: hidden;
+        }
+
+        .slide-inactive--next,
+        .slide-inactive--previous {
+            transform: scale(0.86);
+            z-index: 5;
+        }
+
+        .slide-inactive--next {
+            left: 20%;
+            top: 0;
+        }
+
+        .slide-inactive--previous {
+            left: -20%;
+            top: 0;
+        }
+
+        .slide-active {
+            left: 0;
+            z-index: 10;
+        }
+
+        &-dots {
+            display: flex;
+            position: absolute;
+            bottom: -55px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &-dot {
+            border-radius: 4px;
+            width: 10px;
+            height: 10px;
+            background-color: #d0d0d0;
+
+            & + & {
+                margin-left: 4px;
+            }
+        }
+
+        .dot--active {
+            background-color: $color-second;
+        }
+
+        &-comments {
+            position: relative;
+            height: 350px;
+            width: 58%;
+            background-color: #eaebed;
+        }
+
+        &-comment {
+            display: flex;
+            height: 350px;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .name-and-prof {
+                margin-bottom: 25px;
+            }
+
+            &__text {
+                width: 78%;
+                letter-spacing: 1.5px;
+                margin-bottom: 30px;
+            }
+
+            &-stars {
+                display: flex;
+            }
+        }
+
+        &-buttons {
+            position: absolute;
+            right: 0;
+            bottom: -85px;
+            display: flex;
+        }
+
+        &-button {
+            position: relative;
+            width: 55px;
+            height: 55px;
+            box-shadow: 0px 8px 11px 0px rgba(20, 20, 21, 0.05);
+            background-color: $color-white;
+            cursor: pointer;
+            transition: 0.2s;
+
+            & + & {
+                margin-left: 30px;
+            }
+
+            .button__arrow {
+                position: absolute;
+                bottom: 21px;
+                width: 13px;
+                height: 13px;
+                border-top: 4px solid $color-gray;
+                border-right: 4px solid $color-gray;
+                background-color: inherit;
+                opacity: 0.7;
+            }
+
+            .arrow-next {
+                transform: rotate(45deg);
+                left: 18px;
+            }
+            .arrow-previous {
+                transform: rotate(-135deg);
+                left: 24px;
+            }
+
+            &:hover {
+                background-color: $color-second; 
+            }
+        }
+    }
+}
+
+.star {
+    width: 15px;
+    height: 15px;
+}
+
+.star--active {
+    fill: #f2da3b;
+}
+
+// / Testimonials
