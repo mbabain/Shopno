@@ -676,3 +676,37 @@ body {
 }
 
 // / Testimonials
+
+// Clients 
+
+.section-clients {
+    @include section-padding;
+    
+    .section-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &-items {
+        display: flex;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &-item {
+
+        & + & {
+            margin-left: 70px;
+        }
+        img {
+            display: block;
+        }
+    }
+}

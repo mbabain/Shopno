@@ -430,3 +430,23 @@ body {
 
 .star--active {
   fill: #f2da3b; }
+
+.section-clients {
+  padding-top: 120px;
+  padding-bottom: 120px; }
+  .section-clients .section-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .section-clients-items {
+    display: flex;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; }
+    .section-clients-items:first-child {
+      margin-top: 0; }
+  .section-clients-item + .section-clients-item {
+    margin-left: 70px; }
+  .section-clients-item img {
+    display: block; }
