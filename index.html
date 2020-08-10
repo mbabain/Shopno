@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopno</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@400;600;700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -52,11 +52,24 @@
         </symbol>
     </svg>
     <!-- Header -->
+    <div class="section-header-background"></div>
+    <div class="section-header-menu-background" style="display: none;"></div>
     <header class="section-outer section-header">
         <div class="section-inner">
                 <a href="#" class="section-header-logo">
                     sh<span>O</span>pno
                 </a>
+                <div class="section-header-menu">
+                    <a href="#" class="section-header-menu__link">Home</a>
+                    <a href="#" class="section-header-menu__link">About us</a>
+                    <a href="#" class="section-header-menu__link">Featured works</a>
+                    <a href="#" class="section-header-menu__link">Our services</a>
+                    <a href="#" class="section-header-menu__link">Our team</a>
+                    <a href="#" class="section-header-menu__link">Testimonials</a>
+                    <a href="#" class="section-header-menu__link">Clients</a>
+                    <a href="#" class="section-header-menu__link">Contacts</a>
+                    <a href="#" class="section-header-menu__link">Footer</a>
+                </div>
                 <div class="section-header-hamburger">
                     <div id="bar1" class="section-header-hamburger__bar"></div>
                     <div id="bar2" class="section-header-hamburger__bar"></div>
@@ -84,20 +97,28 @@
             <div class="title">About us</div>
             <div class="subtitle">Lorem ipsum dolor sit amet event landing template</div>
             <div class="section-about-wrapper">
-                <div class="section-about-3d-carousel">
-                    <div class="section-about-3d-carousel-box" style="background-color:red">
-                        <img src="" alt="">
+                <div class="carousel-3d">
+                        <div class="carousel-3d-slides">
+                            <div class="carousel-3d-slide slide-inactive--previous">
+                                <img src="img/testimonials/item1.jpg" alt="">
+                            </div>
+                            <div class="carousel-3d-slide slide-active">
+                                <img src="img/testimonials/item1.jpg" alt="">
+                            </div>
+                            <div class="carousel-3d-slide slide-inactive--next">
+                                <img src="img/testimonials/item1.jpg" alt="">
+                            </div>
+                            <div class="carousel-3d-slide slide--hide">
+                                <img src="img/testimonials/item1.jpg" alt="">
+                            </div>
+                            <div class="carousel-3d-dots">
+                                <span class="carousel-3d-dot"></span>
+                                <span class="carousel-3d-dot dot--active"></span>
+                                <span class="carousel-3d-dot"></span>
+                                <span class="carousel-3d-dot"></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="section-about-3d-carousel-box" style="background-color:green">
-                        <img src="" alt="">
-                    </div>
-                    <div class="section-about-3d-carousel-box" style="background-color:black">
-                        <img src="" alt="">
-                    </div>
-                    <div class="section-about-3d-carousel-box box--hide" style="background-color:yellow">
-                        <img src="" alt="">
-                    </div>
-                </div>
                 <div class="section-about-text-block">
                     <div class="section-about-title">We Actually Do amazing works</div>
                     <div class="section-about-text">A visual approach is an approach to a runway at an airport 
@@ -546,7 +567,45 @@
     <!-- Contacts -->
     <section class="section-outer section-contacts">
         <div class="section-inner">
-            section-contacts
+            <div class="section-contacts-form">
+                <div class="section-contacts-form-input">
+                    <input type="text" placeholder="Name*">
+                </div>
+                <div class="section-contacts-form-input">
+                    <input type="text" placeholder="Subject*">
+                </div>
+                <div class="section-contacts-form-input">
+                    <input type="text" placeholder="Email*">
+                </div>
+                <div class="section-contacts-form-textarea">
+                    <textarea placeholder="Message*"></textarea>
+                </div>
+                <div class="section-contacts-form-button">
+                    <button class=" button">Send message</button>
+                </div>
+            </div>
+            <div class="section-contacts-links">
+                <div class="section-contacts-addresses-and-phone">
+                    <div class="section-contacts-link">Adress line 1</div>
+                    <div class="section-contacts-link">Adress line 2</div>
+                    <div class="section-contacts-link">
+                        Phone:
+                        <a href="+548945645">+548 945645</a>
+                    </div>
+                    <div class="section-contacts-link">Fax: +456456 54546</div>
+                </div>
+                <div class="section-contacts__web-addresses">
+                    <div class="section-contacts-link">Web: 
+                        <a href="#">www.designagency.net</a>
+                    </div>
+                    <div class="section-contacts-link">E-mail: 
+                        <a href="https://gmail.com/">info@designagency.net</a>
+                    </div>
+                </div>
+                <div class="section-contacts__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.5908884590285!2d37.53813431600376!3d55.748236999811475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bdc43dbf5c9%3A0x9c1d880119df7ff!2sMoscow%20City%20Towers!5e0!3m2!1sru!2sru!4v1597043486323!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
         </div>
     </section>
     <!-- / Contacts -->
@@ -554,9 +613,34 @@
     <!-- Footer -->
     <footer class="section-outer section-footer">
         <div class="section-inner">
-            section-footer
+            <div class="section-footer-title">follow us</div>
+            <div class="section-footer-media">
+                <a href="#" class="section-footer-media__link">
+                    <svg>
+                        <use xlink:href="#mail"></use>
+                    </svg>
+                </a>
+                <a href="#" class="section-footer-media__link">
+                    <svg>
+                        <use xlink:href="#twitter"></use>
+                    </svg>
+                </a>
+                <a href="#" class="section-footer-media__link">
+                    <svg>
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a>
+                <a href="#" class="section-footer-media__link">
+                    <svg>
+                        <use xlink:href="#dribble"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="section-footer-copyright">Copyright Masum Parvej, All Rights Reserved</div>
         </div>
     </footer>
     <!-- / Footer -->
+
+    <script src="js/script.js"></script>
 </body>
 </html>
